@@ -36,7 +36,10 @@ class Repetition:
         if event.type == pygame.KEYUP:
             if event.key in (pygame.K_UP, pygame.K_DOWN, pygame.K_LEFT, pygame.K_RIGHT):
                 for ev in self.events:
-                    if ev.key == event.key: 
+                    print ev.key
+                    print event.key
+                    if ev.key == event.key:
+                        print "borrar"
                         self.events.remove(ev)   
                 #self.events.remove(event)
                 self.cont=0
