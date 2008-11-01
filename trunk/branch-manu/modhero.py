@@ -1,9 +1,10 @@
 from images import getImage
 from pygame import K_UP,K_DOWN,K_LEFT,K_RIGHT,KEYDOWN,USEREVENT
+import module
 
-VELOC=5
+VELOC=2
 
-class Hero:
+class Hero (module.Module):
     def __init__(self,screen):
         self.player=getImage('boy')
         self.screen=screen
@@ -24,8 +25,8 @@ class Hero:
             self.need_update.append(self.position)
         return False
         
-    def update(self):
-        return self.need_update
+#    def update(self):
+#        return self.need_update
         
     def draw_surface(self,rect):
         #for rect in rects:
