@@ -1,7 +1,7 @@
 import pygame
 from os import path
 
-SKIN=''
+SKIN='../images'
 FORMAT = 'png'
 
 cache={}

@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
 
+from game.game import Game
 import pygame
 import sys
 #from rpg import rpg, repetition, character,hero
