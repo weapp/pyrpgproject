@@ -3,7 +3,7 @@
 
 import sys
 import background,sidebar
-import modhero
+import modhero,modchar,rectangle,fond
 from library import singleton,core
 from rpg import rpg, repetition, character,hero
 #import maps
@@ -31,19 +31,24 @@ class Game():
         heroe=hero.Hero(image='Character Pink Girl')
         
             
-        RPG=rpg.RPG(screen, mapa,[heroe,personajillo1])
+        RPG=rpg.RPG(screen.subsurface((200,200,400,200)), mapa,[heroe,personajillo1])
         
         Repetition=repetition.Repetition()
         
         
+        
+        #self.core.add_object(fond.rect(self.core.get_screen()))
+        
         self.core.add_object(background.Bg(self.core.get_screen()))
         
-        self.core.add_object(RPG)
+        #self.core.add_object(RPG)
 
         self.core.add_object(modhero.Hero(self.core.get_screen()))
+        self.core.add_object(modchar.Hero(self.core.get_screen()))
         
         self.core.add_object(sidebar.Sidebar(self.core.get_screen()))
         
+        #self.core.add_object(rectangle.rect(self.core.get_screen()))
     
     def start(self):
         self.core.start()

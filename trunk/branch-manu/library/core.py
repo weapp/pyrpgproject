@@ -32,7 +32,7 @@ class Core:
     def start(self):
         self.running=True
         while self.running:
-            self.clock.tick(50) #40 frames por segundo
+            self.clock.tick(40) #40 frames por segundo
             
             #control de eventos  (llamar a la funcion new_event de cada objeto y proceder a otros si asi lo dice algun objeto)
             for event in pygame.event.get():
@@ -50,18 +50,18 @@ class Core:
             updates=[]
             for obj in self.objects:
                 need_update=obj.update()
-                if need_update:
-                    if hasattr(need_update,'__iter__'):
-                        updates.extend(need_update)
-                #print update
-                #print dir(update[0])
+                if need_update and hasattr(need_update,'__iter__'):
+                    updates.extend(need_update)
+            
                 
             if updates:
-                #pintando        
-                #screen.blit( RPG.surface, (0,0))
-                for update in updates:
-                    for obj in self.objects:
-                        obj.draw_surface(update)
+                
+                update=reduce(lambda x,y:pygame.Rect.union(x,y),updates)
+            
+                
+                #pintando 
+                #for update in updates:
+                map(lambda obj:obj.draw_surface(update),self.objects)
                 pygame.display.flip()
 
         
