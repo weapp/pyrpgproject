@@ -1,6 +1,6 @@
-from images import getImage
+from library.images import getImage 
 from pygame import K_UP,K_DOWN,K_LEFT,K_RIGHT,KEYDOWN,USEREVENT
-import module
+from library import module
 
 VELOC=2
 

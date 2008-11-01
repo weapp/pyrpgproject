@@ -25,6 +25,9 @@ class Core:
                 
     def add_object(self,obj):
         self.objects.append(obj)
+    
+    def get_screen(self):
+        return self.screen
 
     def start(self):
         self.running=True
@@ -48,7 +51,8 @@ class Core:
             for obj in self.objects:
                 need_update=obj.update()
                 if need_update:
-                    updates.extend(need_update)
+                    if hasattr(need_update,'__iter__'):
+                        updates.extend(need_update)
                 #print update
                 #print dir(update[0])
                 
