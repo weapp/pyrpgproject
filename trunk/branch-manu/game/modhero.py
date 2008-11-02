@@ -6,8 +6,8 @@ import pygame
 VELOC=2
 
 class Hero (modimage.ModuleImage):
-    def __init__(self,surface):
-        modimage.ModuleImage.__init__(self,surface,'Character Boy',(200,100))
+    def __init__(self,surface,image,position):
+        modimage.ModuleImage.__init__(self,surface,image,position)
         
     def new_event(self,event):
         if event.type in [KEYDOWN, USEREVENT] and event.key in [K_a,K_s,K_d,K_w]:
