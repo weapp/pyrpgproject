@@ -53,12 +53,9 @@ class Core:
                 if need_update and hasattr(need_update,'__iter__'):
                     updates.extend(need_update)
             
-                
+            updates = filter(lambda x: type(x) is pygame.Rect, updates)
             if updates:
-                
                 update=reduce(lambda x,y:pygame.Rect.union(x,y),updates)
-            
-                
                 #pintando 
                 #for update in updates:
                 map(lambda obj:obj.draw_surface(update),self.objects)
