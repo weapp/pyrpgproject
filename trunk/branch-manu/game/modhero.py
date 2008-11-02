@@ -1,16 +1,13 @@
 from library.images import getImage 
 from pygame import K_a,K_s,K_d,K_w,KEYDOWN, USEREVENT
-from library import module
+from library import modimage
 import pygame
 
 VELOC=2
 
-class Hero (module.Module):
+class Hero (modimage.ModuleImage):
     def __init__(self,surface):
-        self.player=getImage('Character Boy')
-        self.surface=surface
-        self.position = self.player.get_rect().move(200,100)
-        self.need_update=[self.player.get_rect()]
+        modimage.ModuleImage.__init__(self,surface,'Character Boy',(200,100))
         
     def new_event(self,event):
         if event.type in [KEYDOWN, USEREVENT] and event.key in [K_a,K_s,K_d,K_w]:

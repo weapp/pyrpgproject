@@ -1,6 +1,6 @@
 class Module(object) :
     def __init__(self) :
-        if type(self) is AbstractClass :
+        if type(self) is Module:
             raise AbstractClassException
         else:
             self.need_update=[]
