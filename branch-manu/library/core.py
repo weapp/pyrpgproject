@@ -25,6 +25,25 @@ class Core:
                 
     def add_object(self,obj):
         self.objects.append(obj)
+
+    def top(self,x):
+        obj=self.objects.pop(x)
+        self.objects.reverse()
+        self.objects.append(obj)
+        self.objects.reverse()
+        
+    def bottom(self,x):
+        obj=self.objects.pop(x)
+        self.objects.append(obj)
+        
+    def up(self,x):
+        if x<len(self.objects)-1:
+            self.objects[x+1],self.objects[x]=self.objects[x],self.objects[x+1]
+        
+    def down(self,x):
+        if x>0:
+            self.objects[x-1],self.objects[x]=self.objects[x],self.objects[x-1]
+        
     
     def get_screen(self):
         return self.screen
@@ -35,6 +54,8 @@ class Core:
             self.clock.tick(40) #40 frames por segundo
             
             #control de eventos  (llamar a la funcion new_event de cada objeto y proceder a otros si asi lo dice algun objeto)
+            
+            self.objects.reverse()
             for event in pygame.event.get():
                 for obj in self.objects:
                     if obj.new_event(event):
@@ -44,7 +65,7 @@ class Core:
                 if (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE) or event.type == pygame.QUIT:
                     sys.exit()
                 #print "evento[", event ,"] no usado"
-                
+            self.objects.reverse()
                          
             #updates (llamar a la funcion update de cada objeto y ver si alguno de ellos se ha cambiado)
             updates=[]
