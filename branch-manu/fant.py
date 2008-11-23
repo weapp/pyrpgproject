@@ -27,7 +27,7 @@ class ghost(module.Module):
         self.giros=[img['giro'] for img in imgs]
         
     def draw(self):
-        for iha in range(len(self.position)):
+        for i in range(len(self.position)):
             for cont in range(len(self.f)):
                 f=transform.rotozoom(self.f[cont], self.giros[cont]*self.angle - i*4 * ANGLE , ((float(i)+1)/len(self.position))**2 )
                 f_rect=f.get_rect()
