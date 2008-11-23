@@ -4,7 +4,7 @@
 import sys
 import background,sidebar
 import modhero,modchar,rectangle,fond
-from library import singleton,core,xmlparser
+from library import singleton,core,xmlparser,menu
 from rpg import rpg, repetition, character,hero
 #import maps
 
@@ -49,6 +49,10 @@ class Game():
         self.app.add(sidebar.Sidebar(self.screen))
          
         #self.core.add_object(rectangle.rect(self.core.get_screen()))
+        
+        self.app.add(menu.Menu(self.screen,['1','2','3','3']))
+        
+        print self.app
     
     def start(self):
         self.core.start()

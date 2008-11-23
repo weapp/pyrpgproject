@@ -65,18 +65,18 @@ class Objects(list):
         map(lambda x: x.update(),self)
     
     def draw(self):
+        """
         for obj in self:
-            obj.draw()
-            """try:
+            try:
                 obj.draw()
             except:
                 raise Exception("Draw method of " + repr(obj) + " is not avalible")
-            """    
-        #map(lambda x: x.draw(),self)
+        """    
+        map(lambda obj: obj.draw(),self)
         
 class Core:
     __metaclass__ = singleton.Singleton
-    def __init__(self,caption="",app=Objects(),repeat=(1,0)):    
+    def __init__(self,caption="",app=Objects(),repeat=(90,90)):    
         self.__app=app
         self.__running=False
         self.__clock = pygame.time.Clock()

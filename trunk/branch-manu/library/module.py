@@ -12,7 +12,7 @@ class Module(object) :
     def update(self):
         return self.need_update
         
-    def draw_surface(self,rect):
+    def draw(self,rect):
         pass
         
 class AbstractClassException(Exception) :

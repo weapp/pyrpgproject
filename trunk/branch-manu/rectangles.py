@@ -57,7 +57,7 @@ class rectangles(module.Module):
         
         self.surface.blit(boy2, rect, recorte)
 
-core=core.Core()
-core.add_object(rectangles(core.get_screen()))
+app=core.Dirty_Objects()
+core=core.Core(app=app)
+app.add(rectangles(core.get_screen()))
 core.start()
-
