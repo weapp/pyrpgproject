@@ -45,7 +45,8 @@ class Menu(module.Module):
                 
             #pintar todos los rekuadros y el texto de las opciones
             for i in range(len(self.options)):
-                rect=(self.margen_izq, self.margen_sup+self.interlineado*i+self.alto*i, self.ancho, self.alto)
+                rect=pygame.Rect(self.margen_izq, self.margen_sup+self.interlineado*i+self.alto*i, self.ancho, self.alto)
+                rect.centerx=self.screen.get_rect().centerx
                 
                 if i==self.position:
                     pygame.draw.rect(self.screen, self.color_selec, rect)
