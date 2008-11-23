@@ -26,7 +26,9 @@ class Hero (module.Module):
             self.need_update.append(self.position)
         return False
         
-    def draw_surface(self,rect):
+    def draw(self,rect=None):
+        if not rect:
+            rect=self.surface.get_rect()
         #self.surface.blit(self.player, pygame.Rect.clip(self.position,rect))
         
         pos_muneco=self.player.get_rect().move(self.position[0],self.position[1])

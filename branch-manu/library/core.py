@@ -4,85 +4,115 @@
 import singleton
 import pygame
 import sys
-#from rpg import rpg, repetition, character,hero
-#import maps
 
 SCREEN_WIDTH, SCREEN_HEIGHT = 1200, 860
-
-class Core:
-    __metaclass__ = singleton.Singleton
-    def __init__(self,caption=""):    
-        self.objects=[]
-    
-        #pygame.init() # >>>>>>  open /dev/sequencer or /dev/snd/seq: No such file or directory    
-        pygame.display.set_caption(caption)
-        pygame.display.init()
-        pygame.key.set_repeat(1,0)
-        self.screen = pygame.display.set_mode((640,480))#TODO cambiar (esta asi para que me entre en la pantalla)
-        #print pygame.display.list_modes()[1]
-        self.running=False
-        self.clock = pygame.time.Clock()
-                
-    def add_object(self,obj):
-        self.objects.append(obj)
-
+class list(list):
+    def add(self,x):
+        self.append(x)
+        
     def top(self,x):
-        obj=self.objects.pop(x)
-        self.objects.reverse()
-        self.objects.append(obj)
-        self.objects.reverse()
+        self.append(self.pop(x))
         
     def bottom(self,x):
-        obj=self.objects.pop(x)
-        self.objects.append(obj)
+        self.insert(0,self.pop(x))
         
     def up(self,x):
-        if x<len(self.objects)-1:
-            self.objects[x+1],self.objects[x]=self.objects[x],self.objects[x+1]
+        self.insert(x+1,self.pop(x))
         
     def down(self,x):
         if x>0:
-            self.objects[x-1],self.objects[x]=self.objects[x],self.objects[x-1]
-        
+            self.insert(x-1,self.pop(x))
     
-    def get_screen(self):
-        return self.screen
+class Dirty_Objects(list):
+    def new_event(self,event):        
+        b=False
+        self.reverse()
+        for obj in self:
+            if obj.new_event(event):
+                b=True
+                #print "evento[", repr(event.unicode) ,"]terminado por el objeto de tipo:", obj.__class___, ":",repr(objeto)
+                break
+        self.reverse()
+        return b
+    
+    def update(self):
+        updates=[]
+        for obj in self:
+            need_update=obj.update()
+            if need_update and hasattr(need_update,'__iter__'):
+                updates.extend(need_update)
+        self.updates = filter(lambda x: type(x) is pygame.Rect, updates)
+        return self.updates
+    
+    def draw(self):
+        if self.updates:
+            update=reduce(lambda x,y:pygame.Rect.union(x,y),self.updates)
+            map(lambda obj:obj.draw(update),self)
+
+class Objects(list):
+    def new_event(self,event):        
+        b=False
+        self.reverse()
+        for obj in self:
+            if obj.new_event(event):
+                b=True
+                #print "evento[", repr(event.unicode) ,"]terminado por el objeto de tipo:", obj.__class___, ":",repr(objeto)
+                break
+        self.reverse()
+        return b
+    
+    def update(self):
+        map(lambda x: x.update(),self)
+    
+    def draw(self):
+        for obj in self:
+            obj.draw()
+            """try:
+                obj.draw()
+            except:
+                raise Exception("Draw method of " + repr(obj) + " is not avalible")
+            """    
+        #map(lambda x: x.draw(),self)
+        
+class Core:
+    __metaclass__ = singleton.Singleton
+    def __init__(self,caption="",app=Objects(),repeat=(1,0)):    
+        self.__app=app
+        self.__running=False
+        self.__clock = pygame.time.Clock()
+        self.__screen = pygame.display.set_mode((640,480))#TODO cambiar (esta asi para que me entre en la pantalla)
+        #print pygame.display.list_modes()[1]
+        
+        pygame.display.set_caption(caption)
+        pygame.display.init()
+        if repeat:
+            pygame.key.set_repeat(*repeat)
+        
+        print dir(pygame.time)
+        print dir(self.__clock)
+    
+    def get_app(self): return self.__app
+    def get_screen(self): return self.__screen
 
     def start(self):
-        self.running=True
-        while self.running:
-            self.clock.tick(40) #40 frames por segundo
+        self.__running=True
+        while self.__running:
+            self.__clock.tick(20) #40 frames por segundo
             
-            #control de eventos  (llamar a la funcion new_event de cada objeto y proceder a otros si asi lo dice algun objeto)
-            
-            self.objects.reverse()
+            #control de eventos
             for event in pygame.event.get():
-                for obj in self.objects:
-                    if obj.new_event(event):
-                        print "evento[", repr(event.unicode) ,"]terminado por el objeto de tipo:", obj.__class___, ":",repr(objeto)
-                        break
-            
+                if self.__app.new_event(event):
+                    continue
                 if (event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE) or event.type == pygame.QUIT:
                     sys.exit()
-                #print "evento[", event ,"] no usado"
-            self.objects.reverse()
-                         
-            #updates (llamar a la funcion update de cada objeto y ver si alguno de ellos se ha cambiado)
-            updates=[]
-            for obj in self.objects:
-                need_update=obj.update()
-                if need_update and hasattr(need_update,'__iter__'):
-                    updates.extend(need_update)
             
-            updates = filter(lambda x: type(x) is pygame.Rect, updates)
-            if updates:
-                update=reduce(lambda x,y:pygame.Rect.union(x,y),updates)
-                #pintando 
-                #for update in updates:
-                map(lambda obj:obj.draw_surface(update),self.objects)
-                pygame.display.flip()
+            #actualizado
+            self.__app.update()
+                        
+            #pintado
+            self.__app.draw()
+            pygame.display.flip()
 
-        
 #esto es para que lance el main cuando se ejecute el fichero
 if __name__ == "__main__":
     m=Core()

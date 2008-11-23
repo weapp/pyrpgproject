@@ -20,20 +20,21 @@ class mapa:
         
         self.caps=[
         [
-        [A,D,D,D,D,D,A],
-        [D,D,D,A,D],
-        [D,D,D,A,D,D,D],
-        [A,A,A,A,A,D],
+        [A,D,D,D,D,D,A,A,A,A,A,A,A,A,D,D,D,D],
+        [D,D,D,A,D,A,A,A,A,A,A,A,D,D,D,D,D,D],
+        [D,D,D,A,D,D,D,D,D,D,D,D,D,D,D,D,D,D],
+        [A,A,A,A,A,D,A,A,A,A,A,A,A,A,D,D,D,D],
         ],
         
         [
-        [A,A,C,C,C,C],
-        [C,C,C,A,C],
-        [A,C,C,A,C,C]
+        [A,A,C,C,C,C,A,A,A,A,A,A,A,A,C,C,C,C],
+        [C,C,C,A,C,A,A,A,A,C,C,C,C,C,C,C,C,C],
+        [A,C,C,A,C,C,C,C,C,C,C,C,C,C,C,C,C,C],
+        [A,A,A,A,A,A,A,A,A,A,A,A,A,A,C,C,C,C],
         ],
         
         [
-        [A,A,A,A,A,B],
+        [A,A,A,A,A,B,A,A,A,A,A,A,A,A,A,A,A,B],
         [],
         [A,B]
         ],

@@ -7,5 +7,5 @@ class rect(module.Module):
         self.surface=surface
         self.need_update=[]
        
-    def draw_surface(self,rect):
+    def draw(self,rect):
         pygame.draw.rect(self.surface, (0,0,255), rect)

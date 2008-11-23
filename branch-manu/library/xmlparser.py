@@ -15,9 +15,7 @@ class Element(dict):
     def __init__(self,node):
         self.node=node
         for elem in node.childNodes:
-            
-            print repr(elem.hasChildNodes()) + "  " + str(elem)
-            
+            #print repr(elem.hasChildNodes()) + "  " + str(elem)
             if elem.hasChildNodes():
                 key = str(elem.tagName)
                 if key not in self:
@@ -25,7 +23,6 @@ class Element(dict):
                 self[key].append(Element(elem))
             else:
                 self['value']=elem.nodeValue
-                
                 
     def __str__(self):
         return self.__repr__()
