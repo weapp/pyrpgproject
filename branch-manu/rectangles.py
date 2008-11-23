@@ -53,8 +53,6 @@ class rectangles(module.Module):
         pos_muneco=boy2.get_rect().move(50,50)
         recorte=rect.move(-pos_muneco[0],-pos_muneco[1])
         
-        #draw.rect(self.surface,(255,255,255,125),z)
-        
         self.surface.blit(boy2, rect, recorte)
 
 app=core.Dirty_Objects()
