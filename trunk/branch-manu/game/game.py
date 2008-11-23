@@ -50,7 +50,7 @@ class Game():
          
         #self.core.add_object(rectangle.rect(self.core.get_screen()))
         
-        self.app.add(menu.Menu(self.screen,['1','2','3','3']))
+        self.app.add(menu.Menu(self.screen,[' Preferences ',' Controllers ',' Exit ']))
         
         print self.app
     
