@@ -1,10 +1,11 @@
 from library import images
 from flags import *
+import pygame
 
-class Block:
+class Block(pygame.sprite.Sprite):
     def __init__(self,image='None',flags=0):
-        self.__image_name = image
-        self.save_cache(image)
+        pygame.sprite.Sprite.__init__(self)
+        self.set_image(image)
         
         self.flags=flags
         self.invisible = bool(INVISIBLE & flags)
@@ -12,14 +13,15 @@ class Block:
         self.floor = not bool(NOT_FLOOR & flags)
         self.block = bool(BLOCK & flags)
     
-    def getcache(self):
-        return images.getImage(self.__image_name) 
+    def get_image(self):
+        return images.getImage(self.__image_name)
     
-    def save_cache(self,image):
+    def set_image(self,image):
         self.__image_name=image
         return images.cacheImage(image)
 
-    image  = property(getcache, save_cache )
+    image = property(get_image, set_image )
+    
     
     def __str__(self):
         r = 'image    :' + str(self.__image_name) + "\n"

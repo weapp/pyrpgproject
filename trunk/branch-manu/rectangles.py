@@ -6,7 +6,7 @@ class rectangles(module.Module):
         self.surface=surface
         self.need_update=[surface.get_rect()]
         
-    def draw_surface(self,rect):
+    def draw(self,rect):
         self.surface.fill((200,200,200))
         rect=Rect(15,15,100,100) 
         draw.rect(self.surface, (22,22,130), rect , 2 )

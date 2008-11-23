@@ -10,7 +10,7 @@ class ModuleImage (module.Module):
         self.position = self.player.get_rect().move(*position)
         self.need_update.append(self.player.get_rect())
         
-    def draw_surface(self,rect):
+    def draw(self,rect):
         pos_image=self.player.get_rect().move(self.position[0],self.position[1])
         clip=rect.move(-pos_image[0],-pos_image[1])
         self.surface.blit(self.player, rect, clip)
