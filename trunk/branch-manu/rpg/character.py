@@ -6,8 +6,9 @@ from library.vector import vector
 #from numpy import array as vector
 #from vector import Vector2 as vector
 
+from library import module
 
-class Character:
+class Character(module.Module):
 
     def __init__(self,chart=None,image='Character Horn Girl'):
         self.__position = vector([2,0,2])
@@ -45,6 +46,7 @@ class Character:
         return reduce(lambda b,x: b and -0.2<x<0.2 , (self.get_actual_position() - self.get_position()) , True)
         
     def move_up(self):
+    
         if self.fin_mov() and self.chart.puede_estar( *vector(self.get_position()) - vector([0,1,1]) ):
             self.__position[1]-=1
             return True
