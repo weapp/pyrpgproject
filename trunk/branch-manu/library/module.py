@@ -1,5 +1,6 @@
 import types
 import core
+import sys
 
 def deco_verboso(name,nmethod,method):
     if nmethod == "__init__":
@@ -25,7 +26,7 @@ class Meta_Verboso(type):
     def __init__(cls, name, bases, dct):
         print 'Inicializando la clase', name
         type.__init__(cls, name, bases, dct)
-        setattr(cls,'app',core.Core().get_app())
+        #setattr(cls,'app',core.Core().get_app())
     """
 
         methods = [x for x in dct if isinstance(dct[x], types.FunctionType)] 
@@ -47,8 +48,10 @@ class Module(object):
         if type(self) is Module:
             raise AbstractClassException
         else:
-            self.need_update=[]
             #constructor por defecto de las subclases
+            self.need_update=[]
+            self.core=core.Core()
+            self.app=self.core.get_app()
             
     def new_event(self,event):
         return False
@@ -58,6 +61,14 @@ class Module(object):
         
     def draw(self):
         pass
+        
+    #def send_to_red(self,name,*args,**kw): #TODO mandar una funcion con el resultado
+    
+    #def get_from_red(self,name,*args,**kw): #TODO pedir al servidor el resultado de una funcion
+    
+    def event_to_red(self,name,*args,**kw):
+        print "se esta ejecutando:", name, ", con los parametros:", args, kw
+        getattr(self,name)(*args,**kw)
         
 class AbstractClassException(Exception) :
     def __str__(self):

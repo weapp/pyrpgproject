@@ -8,7 +8,16 @@ from library.vector import vector
 
 from library import module
 
+
+
 class Character(module.Module):
+    def verboso(fun, *args,**kw):
+        def func(*args,**kw):
+            print 'llamando a:',fun.__name__,'con los parametros', args, kw
+            return fun(*args,**kw)
+        func.__name__=fun.__name__
+        func.func_name=fun.func_name
+        return func
 
     def __init__(self,chart=None,image='Character Horn Girl'):
         self.__position = vector([2,0,2])
@@ -45,6 +54,7 @@ class Character(module.Module):
         
         return reduce(lambda b,x: b and -0.2<x<0.2 , (self.get_actual_position() - self.get_position()) , True)
         
+    @Character.verboso
     def move_up(self):
     
         if self.fin_mov() and self.chart.puede_estar( *vector(self.get_position()) - vector([0,1,1]) ):
