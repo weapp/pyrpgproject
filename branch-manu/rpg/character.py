@@ -54,7 +54,7 @@ class Character(module.Module):
         
         return reduce(lambda b,x: b and -0.2<x<0.2 , (self.get_actual_position() - self.get_position()) , True)
         
-    @Character.verboso
+    #@Character.verboso
     def move_up(self):
     
         if self.fin_mov() and self.chart.puede_estar( *vector(self.get_position()) - vector([0,1,1]) ):
