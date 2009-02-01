@@ -1,6 +1,7 @@
 import pygame
 import sys
 import module
+import os
 
 class Menu(module.Module):
     def __init__(self, screen, options,margen_sup=0,margen_izq=0,interlineado=20,letra=("Akbar",90,(0,125,255),(0,225,255)),color_base=(113,113,113),color_selec=(213,213,213)):
@@ -13,8 +14,6 @@ class Menu(module.Module):
         self.screen=screen
         self.color_base=color_base
         self.color_selec=color_selec
-        
-        #a=hsl2rgb.hsl2rgb(letra[2][0],letra[2][1],letra[2][2])
         
         self.font = pygame.font.SysFont(letra[0],letra[1])
         self.surfont=[]
@@ -77,3 +76,4 @@ class Menu(module.Module):
     def up(self):
         self.position-=1
         self.update()
+        
