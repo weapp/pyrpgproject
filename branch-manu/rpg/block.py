@@ -10,7 +10,7 @@ class Block(pygame.sprite.Sprite):
         self.flags=flags
         self.invisible = bool(INVISIBLE & flags)
         self.tall = bool(TALL & flags)
-        self.floor = not bool(NOT_FLOOR & flags)
+        self.floor = bool(FLOOR & flags)
         self.block = bool(BLOCK & flags)
     
     def get_image(self):
@@ -30,3 +30,6 @@ class Block(pygame.sprite.Sprite):
         r+= 'floor    :' + str(self.floor) + "\n"
         r+= 'block    :' + str(self.block) + "\n"
         return r
+        
+    def __repr__(self):
+        return str(self.__image_name[:1])

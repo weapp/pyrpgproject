@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<map>
+    <tiles>
+        <tile name="A" image="None"         block="False"  tall="False"  floor="False"/>
+        <tile name="B" image="Stone Block"  block="True"   tall="False"  floor="True" />
+        <tile name="C" image="Grass Block"  block="True"   tall="False"  floor="True" />
+        <tile name="D" image="Dirt Block"   block="True"   tall="False"  floor="True" />
+    </tiles>
+    <layers>
+        <layer>
+        A D D D D D A A A A A A A A D D D D
+        D D D A D A A A A A A A D D D D D D
+        D D D A D D D D D D D D D D D D D D
+        A A A A A D A A A A A A A A D D D D
+        </layer>
+
+        <layer>
+        A A C C C C A A A A A A A A C C C C
+        C C C A C A A A A C C C C C C C C C
+        A C C A C C C C C C C C C C C C C C
+        A A A A A A A A A A A A A A C C C C
+        </layer>
+
+
+        <layer>
+
+        A A A A A B A A A A A A A A A A A B
+        A A A A A A A A A A A A A A A A A A
+        A B A A A A A A A A A A A A A A A A
+        A A A A A A A A A A A A A A A A A A
+        </layer>
+
+        <layer>
+        A A A A A A A A A A A A A A A A A A
+        A A A A A A A A A A A A A A A A A A
+        A A A A A A A A A A A A A A A A A A
+        A A A A A A A A A A A A A A A A A A
+        </layer>
+    </layers>
+</map>
