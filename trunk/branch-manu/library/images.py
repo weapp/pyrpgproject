@@ -18,7 +18,7 @@ def loadImage(name, force=False):
     try:
         image = pygame.image.load(fullname)
     except pygame.error, message:
-        print 'Cannot load image: ' + name
+        print 'Cannot load image: ' + str(name)
         raise SystemExit, message
     return image.convert_alpha()
 

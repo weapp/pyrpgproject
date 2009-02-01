@@ -1,20 +1,18 @@
 from rpg.block import *
 
-A=Block('None',NOT_FLOOR)
 
 class mapa:
     def __init__(self):
-        self.pos=[0,1,1]
-        self.pos_campo=[0,0]
         self.TILE_WIDTH=101
         self.TILE_Y_SPACING=82
         self.TILE_DEPTH=40
         self.TILE_HEIGHT=171
         
-        A=Block('None',NOT_FLOOR)        
-        B=Block('Stone Block',BLOCK)   
-        C=Block('Grass Block',BLOCK)     
-        D=Block('Dirt Block',BLOCK)
+        global A
+        A=Block('None')
+        B=Block('Stone Block',BLOCK | FLOOR)   
+        C=Block('Grass Block',BLOCK | FLOOR)     
+        D=Block('Dirt Block',BLOCK | FLOOR)
         
         
         
