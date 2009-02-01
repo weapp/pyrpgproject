@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<state>
+    <obj type="personaje">
+        <param name="position">
+            <obj type="point">
+                <param name="x">45</param>
+                <param name="y">25</param>
+            </obj>
+        </param>
+        <param name="name">Aaron</param>
+        <param name="money">50</param>
+    </obj>
+    <obj type="enemy">
+        <param name="position">
+            <obj type="point">
+                <param>70</param>
+                <param>20</param>
+            </obj>
+        </param>
+        <param name="ia"> lala </param>
+        <param name="destiny">
+            <obj type="point">
+                <param>25</param>
+                <param name="y">40</param>
+            </obj>
+        </param>
+    </obj>
+    <obj type="place">
+          ----
+    </obj>
+</state>
