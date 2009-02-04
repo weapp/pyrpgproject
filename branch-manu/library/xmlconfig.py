@@ -66,7 +66,6 @@ def cargar_estado(xmlfile,add,loader):
     assert state.tagName == "state"
     for obj in state.childNodes:
         if obj.nodeType == xml.dom.minidom.Node.ELEMENT_NODE:
-            print 'sto es lo k devuelve:' ,parsear_objeto(obj,loader)
             add(parsear_objeto(obj,loader))
             
 def parsear_parametro(elem,loader):

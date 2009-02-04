@@ -36,4 +36,5 @@
         </param>
     </obj>-->
     <obj type="toogle_fullscreen" />
+    <obj type="fps" />
 </state>

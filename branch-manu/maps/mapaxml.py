@@ -1,6 +1,8 @@
 from rpg.block import *
 import xml.dom.minidom
 import string
+from library import images
+import os
 
 def _parsea_tiles(node,dic):
     for tile in node.childNodes:
@@ -23,7 +25,9 @@ def _parsea_layers(node,dic):
             assert layer.tagName=="layer"
             text=str(layer.firstChild.data.strip())
             text=map(string.split,text.splitlines())
-            text=map(lambda x:map(dic.get,x),text)
+            #text=map(lambda x:map(dic.get,x),text)
+            text = [ [ dic[n] for n in line ] for line in text ]
+            
             layers.append(text)
     return layers
                    
@@ -31,10 +35,29 @@ class mapa:
 
     
     def __init__(self,xmlfile='maps/pruebas1.xml'):
+        
+        self.opt={}
+        
+        config=xml.dom.minidom.parse('images'+os.sep+'tiles.xml')
+        tile=config.firstChild
+        print tile.tagName
+        assert tile.tagName == "tile"
+        for op in tile.childNodes:
+            if op.nodeType == xml.dom.minidom.Node.ELEMENT_NODE:
+                self.opt[str(op.tagName)]=int(op.firstChild.data)
+        
+        print self.opt
+        
+        """
         self.TILE_WIDTH=101
         self.TILE_Y_SPACING=82
         self.TILE_DEPTH=40
         self.TILE_HEIGHT=171
+        """
+        self.TILE_WIDTH=self.opt['width']
+        self.TILE_Y_SPACING=self.opt['y_spacing']
+        self.TILE_DEPTH=self.opt['depth']
+        self.TILE_HEIGHT=self.opt['height']
 
         config=xml.dom.minidom.parse(xmlfile)
         map_=config.firstChild
@@ -49,7 +72,6 @@ class mapa:
                     _parsea_tiles(node,dic)
                 else:
                     self.caps=_parsea_layers(node,dic)
-                    print self.caps
                 i+=1
 
 
