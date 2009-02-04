@@ -10,7 +10,7 @@ import sys
 def main():
     #m=Menu()
     #m.start()
-    m=Game()
+    m=Game('game/config.xml')
     m.start()
         
 #esto es para que lance el main cuando se ejecute el fichero
