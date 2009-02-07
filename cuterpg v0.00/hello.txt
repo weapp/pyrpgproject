@@ -1,0 +1,14 @@
+yerba:floor,pisable
+piedra:floor,pisable
+awita:floor,non-pisable
+
+
+
+algo:par1,par2:par3,par4
+
+
+fr2:fr3,4,246,246,232352,325,34
+shs:
+nsfnb:3
+fhrhs
+
