@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<state>
+    <obj type="background">
+        <param name="image">fondo</param>
+        <param name="r">251</param>
+        <param name="g">255</param>
+        <param name="b">251</param>
+    </obj>
+    <obj type="rpg">
+        <param name="rpg_map">
+            <obj type="mapa">
+                <param name="name">mapaxml</param>
+            </obj>
+        </param>
+        <param name="characters">
+            <obj type="list">
+                <param>
+                    <obj type="hero">
+                        <param name="image">Character Pink Girl</param>
+                    </obj>
+                </param>
+                <param>
+                    <obj type="character" />
+                </param>
+            </obj>
+        </param>
+    </obj>
+    <obj type="sidebar" />
+    <!--<obj type="menu">
+        <param>
+            <obj type="list">
+                <param>Preferences</param>
+                <param>Controllers</param>
+                <param>Exit</param>
+            </obj>
+        </param>
+    </obj>-->
+    <obj type="toogle_fullscreen" />
+    <obj type="fps" />
+</state>
