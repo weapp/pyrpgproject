@@ -4,7 +4,7 @@ import sortablelist
 
 class SortableDict(dict):
 
-    def __init__(self):
+    def __init__(self):appe
         self.__keys=sortablelist.SortableList()
 
     def top(self,x):
@@ -84,6 +84,9 @@ class SortableDict(dict):
         a = Sortable_dict()
         a.update(dict.copy(self))
         return a
+    
+    def reverse(self):
+        self.__keys.reverse()
 
 if __name__ == '__main__':
     pass
