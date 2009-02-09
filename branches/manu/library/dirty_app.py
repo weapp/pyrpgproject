@@ -2,6 +2,7 @@
 #-*- coding:utf-8 -*-
 
 import sortable_list
+import pygame
 
 class Dirty_app(sortable_list.Sortable_list):
     def new_event(self,event):        
@@ -22,6 +23,8 @@ class Dirty_app(sortable_list.Sortable_list):
             if need_update and hasattr(need_update,'__iter__'):
                 updates.extend(need_update)
         self.updates = filter(lambda x: type(x) is pygame.Rect, updates)
+        
+    def updated(self):    
         return self.updates
     
     def draw(self):

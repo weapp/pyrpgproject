@@ -1,4 +1,4 @@
-from library import core,module,images
+from library import core,module,images,dirty_app
 from pygame import *
 
 class rectangles(module.Module):
@@ -55,7 +55,10 @@ class rectangles(module.Module):
         
         self.surface.blit(boy2, rect, recorte)
 
-app=core.Dirty_Objects()
-core=core.Core(app=app)
+#app=core.Dirty_Objects()
+#core=core.Core(app=app)
+core=core.Core()
+app=dirty_app.Dirty_app()
+core.set_app(app)
 app.add(rectangles(core.get_screen()))
 core.start()

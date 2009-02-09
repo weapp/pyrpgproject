@@ -46,8 +46,11 @@ class ghost(module.Module):
             elif event.key==K_LEFT:  self.pos=self.position[-1].move(-VELOC, 0)
             elif event.key==K_RIGHT: self.pos=self.position[-1].move(VELOC, 0)
     
-app=core.Objects()
-core=core.Core(app=app,repeat=(1,0))
+#app=core.Objects()
+#core=core.Core(app=app,repeat=(1,0))
+core=core.Core()
+app=core.get_app()
+core.set_repeat(1,0)
 app.add(rectangle(core.get_screen()))
 app.add(ghost(core.get_screen(),imgs=[{'img':'a',"giro":-1},{'img':'b',"giro":1}],inicio=[50,50]))
 app.add(ghost(core.get_screen(),imgs=[{'img':'c',"giro":-1},{'img':'d',"giro":1}],inicio=[50,200]))
