@@ -32,8 +32,6 @@ def _parsea_layers(node,dic):
     return layers
                    
 class mapa:
-
-    
     def __init__(self,xmlfile='maps/pruebas1.xml'):
         
         self.opt={}
