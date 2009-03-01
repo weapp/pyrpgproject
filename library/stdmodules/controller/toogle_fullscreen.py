@@ -1,6 +1,6 @@
 import types
 import pygame
-import module
+from library.stdmodules import module
 
 class Toogle(module.Module):
     def __init__(self) :

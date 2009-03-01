@@ -2,7 +2,8 @@
 #-*- coding:utf-8 -*-
 
 import stateloader
-from library import core, xmlconfig, singleton
+from library import core
+from library.general import xmlconfig, singleton
 
 class Game():
     __metaclass__ = singleton.Singleton

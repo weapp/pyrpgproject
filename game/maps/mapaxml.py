@@ -1,7 +1,7 @@
-from rpg.block import *
+from rpglibrary.block import *
 import xml.dom.minidom
 import string
-from library import images
+from library.resources import images
 import os
 
 def _parsea_tiles(node,dic):
@@ -32,11 +32,11 @@ def _parsea_layers(node,dic):
     return layers
                    
 class mapa:
-    def __init__(self,xmlfile='maps/pruebas1.xml'):
+    def __init__(self,xmlfile='game/maps/pruebas1.xml'):
         
         self.opt={}
         
-        config=xml.dom.minidom.parse('images'+os.sep+'tiles.xml')
+        config=xml.dom.minidom.parse('game/images'+os.sep+'tiles.xml')
         tile=config.firstChild
         print tile.tagName
         assert tile.tagName == "tile"

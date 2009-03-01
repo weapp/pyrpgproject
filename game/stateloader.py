@@ -2,14 +2,14 @@
 #-*- coding:utf-8 -*-
 
 from library import core
-import background as bg
+from library.stdmodules import background as bg
 import sidebar as sidebar_
-from rpg import rpg as rpg_
-from rpg import hero as hero_
-from rpg import character as character_
-from library import menu as menu_
-from library import toogle_fullscreen as toogle_fullscreen_
-from library import fps as fps_
+from rpglibrary import rpg as rpg_
+from rpglibrary import hero as hero_
+from rpglibrary import character as character_
+from library.stdmodules.menu import menu as menu_
+from library.stdmodules.controller import toogle_fullscreen as toogle_fullscreen_
+from library.stdmodules.testing import fps as fps_
 
 core=core.Core()
 screen=core.get_screen()
@@ -22,7 +22,13 @@ def rpg(rpg_map,characters):
     return rpg_.RPG(screen,rpg_map,characters)
 
 def mapa(name):
-    return getattr(__import__('maps.'+name),name).mapa()
+    print name
+    import maps.mapaxml
+    print dir(__import__('game.maps').maps)
+    print
+    print "----------"
+    print
+    return getattr(__import__('game.maps').maps,name).mapa()
 
 def list(*arg):
     return arg

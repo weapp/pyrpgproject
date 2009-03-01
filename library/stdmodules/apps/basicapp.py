@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
 
-import sortablelist
+from library.general.structures import sortablelist
 
 class BasicApp(sortablelist.SortableList):
     def new_event(self,event):

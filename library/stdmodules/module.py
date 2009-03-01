@@ -1,5 +1,5 @@
 import types
-import core
+from library import core
 import sys
 
 def deco_verboso(name,nmethod,method):

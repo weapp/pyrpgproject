@@ -3,8 +3,8 @@
 
 import pygame
 
-import singleton
-import basicapp
+from general import singleton
+from stdmodules.apps import basicapp
 
 pygame.init()
 
