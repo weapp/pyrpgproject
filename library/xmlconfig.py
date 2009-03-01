@@ -66,33 +66,33 @@ def cargar_estado(xmlfile,add,loader):
     assert state.tagName == "state"
     for obj in state.childNodes:
         if obj.nodeType == xml.dom.minidom.Node.ELEMENT_NODE:
-            add(parsear_objeto(obj,loader))
-            
-def parsear_parametro(elem,loader):
-    assert elem.tagName == "param"
-    if hasElementNodes(elem):#si el parametro es un objeto,seguir profundizando
-        for obj in elem.childNodes:
-            if obj.nodeType == xml.dom.minidom.Node.ELEMENT_NODE:
-                return parsear_objeto(obj,loader)
-    else:
-        return elem.firstChild.data.strip()
+            add(__parsear_objeto(obj,loader))
     
-def parsear_objeto(obj,loader):
+def __parsear_objeto(obj,loader):
     assert obj.tagName == "obj"
     assert obj.attributes.has_key("type")
     args=[]
     dic={}
     for elem in obj.childNodes:
         if elem.nodeType == xml.dom.minidom.Node.ELEMENT_NODE:
-            parametro=parsear_parametro(elem,loader)
+            parametro=__parsear_parametro(elem,loader)
             if elem.attributes.has_key("name"):
                 dic[str(elem.attributes.get("name").value)]=parametro
             else:
                 args.append(parametro)
     constructor=getattr(loader,obj.attributes["type"].value) #aqui se utiliza s
     return constructor(*args,**dic)
+            
+def __parsear_parametro(elem,loader):
+    assert elem.tagName == "param"
+    if __hasElementNodes(elem):#si el parametro es un objeto,seguir profundizando
+        for obj in elem.childNodes:
+            if obj.nodeType == xml.dom.minidom.Node.ELEMENT_NODE:
+                return __parsear_objeto(obj,loader)
+    else:
+        return elem.firstChild.data.strip()
 
-def hasElementNodes(node):
+def __hasElementNodes(node):
     for elem in node.childNodes:
         if elem.nodeType == xml.dom.minidom.Node.ELEMENT_NODE:
             return True
