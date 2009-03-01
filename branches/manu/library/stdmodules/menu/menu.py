@@ -1,6 +1,6 @@
 import pygame
 import sys
-import module
+from library.stdmodules import module
 import os
 
 class Menu(module.Module):

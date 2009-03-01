@@ -18,7 +18,7 @@
 
 from pygame.sprite import Sprite
 import pygame
-import module
+from library.stdmodules import module
 
 class Fps (Sprite,module.Module):
     "Informa el rendimiento del programa mediante el indicador FPS (cuadros por segundo)"

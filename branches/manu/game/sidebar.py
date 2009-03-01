@@ -1,5 +1,5 @@
-from library import module
-from library.images import getImage 
+from library.stdmodules import module
+from library.resources.images import getImage 
 import pygame	
 
 class Sidebar(module.Module):
