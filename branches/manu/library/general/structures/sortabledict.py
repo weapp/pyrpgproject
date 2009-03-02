@@ -4,7 +4,7 @@ import sortablelist
 
 class SortableDict(dict):
 
-    def __init__(self):appe
+    def __init__(self):
         self.__keys=sortablelist.SortableList()
 
     def top(self,x):

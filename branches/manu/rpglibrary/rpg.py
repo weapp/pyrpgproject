@@ -7,7 +7,9 @@ from library.general.structures.vector import vector
 #from numpy import array as vector
 #from vector import Vector2 as vector
 
-class RPG:
+from library.stdmodules import module
+
+class RPG(module.Module):
     def __init__(self, surface, rpg_map, characters=[]):
         self.rpgmap=rpg_map
         self.surface=surface
