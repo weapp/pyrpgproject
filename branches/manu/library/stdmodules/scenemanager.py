@@ -2,13 +2,15 @@
 #-*- coding:utf-8 -*-
 
 from library.stdmodules import module
-from library.general.structures.sdwak
+from library.general.structures import sdwak
+from apps import sceneapp
 
 class SceneManager (module.Module):
 
     def __init__(self):
+        module.Module.__init__(self)
         self.scenes=sdwak.SDWAK
-        self.scene
+        self.scene=sceneapp.SceneApp()  
         
     def change_scene(name_scene):
         self.scene.end_scene()

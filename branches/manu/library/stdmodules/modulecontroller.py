@@ -6,6 +6,7 @@ from library.general.structures import treenode
 class ModuleController (treenode.TreeNode):
 
     def __init__(self):
+        treenode.TreeNode.__init__(self)
         pass
 
     def update(self):
