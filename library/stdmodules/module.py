@@ -47,6 +47,9 @@ class Module(moduledata.ModuleData, moduleview.ModuleView, \
              modulecontroller.ModuleController):
     __metaclass__ = Meta_Verboso
     def __init__(self) :
+        moduledata.ModuleData.__init__(self)
+        moduleview.ModuleView.__init__(self)
+        modulecontroller.ModuleController.__init__(self)
         if type(self) is Module:
             raise AbstractClassException
         else:
