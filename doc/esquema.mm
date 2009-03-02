@@ -43,7 +43,7 @@
 </node>
 </node>
 <node COLOR="#009999" CREATED="1235921959404" ID="Freemind_Link_1730250890" MODIFIED="1235932935145" POSITION="right" TEXT="library">
-<node COLOR="#009999" CREATED="1235921959404" ID="Freemind_Link_1980787703" MODIFIED="1235921959404" TEXT="general">
+<node COLOR="#009999" CREATED="1235921959404" FOLDED="true" ID="Freemind_Link_1980787703" MODIFIED="1235921959404" TEXT="general">
 <node COLOR="#999999" CREATED="1235921959404" MODIFIED="1235921959404" TEXT="no dependen de pygame">
 <font NAME="Dialog" SIZE="10"/>
 </node>
@@ -66,13 +66,15 @@
 <node COLOR="#006699" CREATED="1235921959406" MODIFIED="1235921959406" TEXT="up(key)"/>
 <node COLOR="#006699" CREATED="1235921959406" MODIFIED="1235921959406" TEXT="down(key)"/>
 </node>
-<node COLOR="#338800" CREATED="1235921959406" FOLDED="true" ID="Freemind_Link_757426260" MODIFIED="1235937021315" TEXT="SortableDictWithAutoKeys">
-<icon BUILTIN="password"/>
+<node COLOR="#338800" CREATED="1235921959406" FOLDED="true" ID="Freemind_Link_757426260" MODIFIED="1235952877587" TEXT="SortableDictWithAutoKeys">
+<icon BUILTIN="button_ok"/>
 <node COLOR="#0033ff" CREATED="1235921959407" MODIFIED="1235921959407" TEXT="sortabledict"/>
-<node COLOR="#cc3300" CREATED="1235921959407" MODIFIED="1235921959407" TEXT="last_int=-1"/>
-<node COLOR="#990000" CREATED="1235921959407" MODIFIED="1235921959407" TEXT="cuando se a&#xf1;ade un nuevo elemento sin darle ninguna key, ha de crearlo con clave=last_int+1">
-<edge WIDTH="thin"/>
+<node COLOR="#cc3300" CREATED="1235921959407" ID="Freemind_Link_147940512" MODIFIED="1235985209331" TEXT="last_int=-1">
 <font NAME="SansSerif" SIZE="12"/>
+</node>
+<node COLOR="#999999" CREATED="1235921959407" ID="Freemind_Link_93418943" MODIFIED="1235985212768" TEXT="cuando se a&#xf1;ade un nuevo elemento sin darle ninguna key, ha de crearlo con clave=last_int+1">
+<edge WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="10"/>
 </node>
 </node>
 <node COLOR="#338800" CREATED="1235921959409" FOLDED="true" ID="Freemind_Link_1839725451" MODIFIED="1235936432112" TEXT="SortableList">
@@ -161,7 +163,7 @@
 <font NAME="Dialog" SIZE="10"/>
 </node>
 </node>
-<node COLOR="#009999" CREATED="1235921959421" ID="Freemind_Link_1069797286" MODIFIED="1235921959421" TEXT="resources">
+<node COLOR="#009999" CREATED="1235921959421" FOLDED="true" ID="Freemind_Link_1069797286" MODIFIED="1235921959421" TEXT="resources">
 <edge WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="12"/>
 <node COLOR="#999999" CREATED="1235921959422" MODIFIED="1235921959422" TEXT="es independiente del core. administra los recursos">
@@ -202,8 +204,11 @@
 <node COLOR="#006699" CREATED="1235921959424" MODIFIED="1235921959424" TEXT="get_skin(space)"/>
 <node COLOR="#006699" CREATED="1235921959424" MODIFIED="1235921959424" TEXT="dict:get_skin()"/>
 </node>
-<node COLOR="#338800" CREATED="1235921959425" FOLDED="true" ID="Freemind_Link_1459992875" MODIFIED="1235921959425" TEXT="Animation">
+<node COLOR="#338800" CREATED="1235921959425" ID="Freemind_Link_1459992875" MODIFIED="1235921959425" TEXT="Animation">
 <node COLOR="#990000" CREATED="1235921959425" MODIFIED="1235921959425" TEXT="necesita trabajo"/>
+<node COLOR="#999999" CREATED="1235986103618" ID="Freemind_Link_886885340" MODIFIED="1235986194527" TEXT="actualmente hay una implementacion de looserjuegos que no funciona bien">
+<font NAME="SansSerif" SIZE="10"/>
+</node>
 </node>
 <node COLOR="#009999" CREATED="1235921959425" ID="Freemind_Link_1390524782" MODIFIED="1235937199060" TEXT="tileadmin">
 <icon BUILTIN="messagebox_warning"/>
@@ -269,7 +274,8 @@
 <node COLOR="#0033ff" CREATED="1235922707579" ID="Freemind_Link_145646001" MODIFIED="1235922906856" TEXT="ModuleController"/>
 <node COLOR="#0033ff" CREATED="1235922722411" ID="Freemind_Link_642938819" MODIFIED="1235922911130" TEXT="ModuleView"/>
 </node>
-<node COLOR="#338800" CREATED="1235930961608" FOLDED="true" ID="Freemind_Link_1506591087" MODIFIED="1235930978779" TEXT="MVCModule">
+<node COLOR="#338800" CREATED="1235930961608" FOLDED="true" ID="Freemind_Link_1506591087" MODIFIED="1235956248520" TEXT="MVCModule">
+<icon BUILTIN="button_ok"/>
 <node COLOR="#0033ff" CREATED="1235931003598" ID="Freemind_Link_1230433082" MODIFIED="1235931085096" TEXT="Module"/>
 <node COLOR="#006699" CREATED="1235928858097" ID="Freemind_Link_631533912" MODIFIED="1235931099940" TEXT="__init__(ModuleData=None,ModuleView=None,ModuleController=None)"/>
 <node COLOR="#cc3300" CREATED="1235921959438" ID="Freemind_Link_446025459" MODIFIED="1235931116324" TEXT="(ModuleData) m = Module()"/>
@@ -286,7 +292,45 @@
 <node COLOR="#990000" CREATED="1235929635083" ID="Freemind_Link_1944058980" MODIFIED="1235929682657" TEXT="hay que crear algun modo de controlarlo"/>
 </node>
 </node>
-<node COLOR="#009999" CREATED="1235921959429" ID="Freemind_Link_1497489467" MODIFIED="1235921959429" TEXT="apps">
+<node COLOR="#338800" CREATED="1235932123813" FOLDED="true" ID="Freemind_Link_320236033" MODIFIED="1235957486903" TEXT="SceneManager">
+<icon BUILTIN="pencil"/>
+<node COLOR="#0033ff" CREATED="1235921959708" ID="Freemind_Link_565649825" MODIFIED="1235932766871" TEXT="Module">
+<node COLOR="#999999" CREATED="1235921959708" MODIFIED="1235921959708" TEXT="no es BasicApp porque no contiene directamente modulos dentro. los modulos estaran en Actual_Scene">
+<edge WIDTH="thin"/>
+<font NAME="Dialog" SIZE="10"/>
+</node>
+</node>
+<node COLOR="#cc3300" CREATED="1235921959708" FOLDED="true" ID="Freemind_Link_528080476" MODIFIED="1235932682151" TEXT="scenes = SDWAK()">
+<edge WIDTH="thin"/>
+<node COLOR="#999999" CREATED="1235921959708" MODIFIED="1235921959708" TEXT="Listado de recursos de dnd se ha de cargar las escenas. No estaran caragadas hasta que no se ejecuten el change_scene">
+<font NAME="Dialog" SIZE="10"/>
+</node>
+</node>
+<node COLOR="#cc3300" CREATED="1235921959708" ID="Freemind_Link_682347881" MODIFIED="1235932713283" TEXT="(Scene) actual_scene"/>
+<node COLOR="#006699" CREATED="1235921959708" ID="Freemind_Link_986019900" MODIFIED="1235931844643" TEXT="change_scene(name_scene)">
+<edge WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="12"/>
+<node COLOR="#999999" CREATED="1235921959709" ID="Freemind_Link_1737399835" MODIFIED="1235932382286" TEXT="para la escena actual y la cambia por una nueva, luego la inicia">
+<font NAME="Dialog" SIZE="10"/>
+</node>
+</node>
+<node COLOR="#006699" CREATED="1235932386654" ID="Freemind_Link_1576057542" MODIFIED="1235957493732" TEXT="charge_scenes(path)">
+<icon BUILTIN="pencil"/>
+<node COLOR="#999999" CREATED="1235932541047" ID="Freemind_Link_280256792" MODIFIED="1235932555890" TEXT="lee un xml y carga las escenas indicadas">
+<font NAME="SansSerif" SIZE="10"/>
+</node>
+<node COLOR="#999999" CREATED="1235932561768" ID="Freemind_Link_1522326861" MODIFIED="1235932588571" TEXT="si es un directorio, cargara todos los xml que halla en el">
+<font NAME="SansSerif" SIZE="10"/>
+</node>
+</node>
+<node COLOR="#006699" CREATED="1235932505022" ID="Freemind_Link_1478889369" MODIFIED="1235957493757" TEXT="charge_scene(name_scene,xmlfilename)">
+<icon BUILTIN="pencil"/>
+<node COLOR="#999999" CREATED="1235932417532" ID="Freemind_Link_113886959" MODIFIED="1235932537235" TEXT="carga un xml en scene_dict">
+<font NAME="SansSerif" SIZE="10"/>
+</node>
+</node>
+</node>
+<node COLOR="#009999" CREATED="1235921959429" FOLDED="true" ID="Freemind_Link_1497489467" MODIFIED="1235921959429" TEXT="apps">
 <edge WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="12"/>
 <node COLOR="#999999" CREATED="1235923677212" ID="Freemind_Link_187892489" MODIFIED="1235923722511" TEXT="contenedores de modulos">
@@ -299,7 +343,9 @@
 <font NAME="Dialog" SIZE="10"/>
 </node>
 <node COLOR="#0033ff" CREATED="1235921959430" ID="Freemind_Link_424277357" MODIFIED="1235923955336" TEXT="SortableDictWithAutoKeys"/>
-<node COLOR="#0033ff" CREATED="1235921959436" ID="Freemind_Link_561057865" MODIFIED="1235922936697" TEXT="Module"/>
+<node COLOR="#0033ff" CREATED="1235921959436" ID="Freemind_Link_561057865" MODIFIED="1235953915773" TEXT="Module">
+<icon BUILTIN="pencil"/>
+</node>
 <node COLOR="#006699" CREATED="1235921959437" MODIFIED="1235921959437" TEXT="update()"/>
 <node COLOR="#006699" CREATED="1235921959437" MODIFIED="1235921959437" TEXT="draw()">
 <edge WIDTH="thin"/>
@@ -307,12 +353,16 @@
 </node>
 <node COLOR="#006699" CREATED="1235921959437" MODIFIED="1235921959437" TEXT="bool:new_event()"/>
 <node COLOR="#006699" CREATED="1235921959437" ID="Freemind_Link_1659004038" MODIFIED="1235921959437" TEXT="bool:updated():True"/>
-<node COLOR="#999999" CREATED="1235928979109" ID="Freemind_Link_1355709504" MODIFIED="1235929239888" TEXT="a los modulos que no contengan un atirubto llamado parents, se les creara una lista.">
+<node COLOR="#999999" CREATED="1235928979109" ID="Freemind_Link_1355709504" MODIFIED="1235954360505" TEXT="a los modulos que no contengan un atirubto llamado parents, se les creara una lista.">
 <font NAME="SansSerif" SIZE="10"/>
 </node>
-<node COLOR="#999999" CREATED="1235929241801" ID="Freemind_Link_572006176" MODIFIED="1235929279844" TEXT="a los modulos pasados como argumento se les a&#xf1;adira una referencia en su lista de parents">
+<node COLOR="#999999" CREATED="1235929241801" ID="Freemind_Link_572006176" MODIFIED="1235954365187" TEXT="a los modulos pasados como argumento se les a&#xf1;adira una referencia en su lista de parents">
 <font NAME="SansSerif" SIZE="10"/>
 <node COLOR="#990000" CREATED="1235929635083" ID="Freemind_Link_1023405890" MODIFIED="1235929682657" TEXT="hay que crear algun modo de controlarlo"/>
+</node>
+<node COLOR="#990000" CREATED="1235954367509" ID="Freemind_Link_1911826297" MODIFIED="1235954408231" TEXT="hay que controlar que cuando se elimine de cierto padre se borre la relacion en el otro sentido">
+<font NAME="SansSerif" SIZE="10"/>
+<icon BUILTIN="pencil"/>
 </node>
 </node>
 <node COLOR="#338800" CREATED="1235921959437" FOLDED="true" ID="Freemind_Link_1136420226" MODIFIED="1235936633039" TEXT="DirtyApp">
@@ -321,8 +371,8 @@
 <font NAME="Dialog" SIZE="10"/>
 </node>
 </node>
-<node COLOR="#338800" CREATED="1235921959438" FOLDED="true" ID="Freemind_Link_383371974" MODIFIED="1235936912402" TEXT="MVCApp">
-<icon BUILTIN="pencil"/>
+<node COLOR="#338800" CREATED="1235921959438" FOLDED="true" ID="Freemind_Link_383371974" MODIFIED="1235956659076" TEXT="MVCApp">
+<icon BUILTIN="button_ok"/>
 <node COLOR="#990000" CREATED="1235931626133" ID="Freemind_Link_1649930878" MODIFIED="1235931742067" TEXT="deprecated?">
 <edge WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="12"/>
@@ -348,70 +398,46 @@
 <node COLOR="#006699" CREATED="1235921959439" ID="Freemind_Link_394041586" MODIFIED="1235923043136" TEXT="update(m &amp; c  &amp; sub) "/>
 <node COLOR="#006699" CREATED="1235921959706" ID="Freemind_Link_170137753" MODIFIED="1235921959706" TEXT="draw() (v &amp; sub)"/>
 <node COLOR="#006699" CREATED="1235921959706" MODIFIED="1235921959706" TEXT="updated():True"/>
-<node COLOR="#006699" CREATED="1235930278562" ID="Freemind_Link_1377516270" MODIFIED="1235930309783" TEXT="add_new_model()"/>
-<node COLOR="#006699" CREATED="1235930292911" ID="Freemind_Link_846410661" MODIFIED="1235930309797" TEXT="add_new_view()"/>
-<node COLOR="#006699" CREATED="1235930300260" ID="Freemind_Link_86403326" MODIFIED="1235930309812" TEXT="add_new_controller()"/>
+<node COLOR="#006699" CREATED="1235930278562" ID="Freemind_Link_1377516270" MODIFIED="1235956648994" TEXT="add_new_model()">
+<icon BUILTIN="pencil"/>
 </node>
-<node COLOR="#338800" CREATED="1235921959706" FOLDED="true" ID="Freemind_Link_631826956" MODIFIED="1235922601834" TEXT="ExtendedApp">
+<node COLOR="#006699" CREATED="1235930292911" ID="Freemind_Link_846410661" MODIFIED="1235956648973" TEXT="add_new_view()">
+<icon BUILTIN="pencil"/>
+</node>
+<node COLOR="#006699" CREATED="1235930300260" ID="Freemind_Link_86403326" MODIFIED="1235956648951" TEXT="add_new_controller()">
+<icon BUILTIN="pencil"/>
+</node>
+</node>
+<node COLOR="#338800" CREATED="1235921959706" FOLDED="true" ID="Freemind_Link_631826956" MODIFIED="1235957674544" TEXT="ExtendedApp">
+<font NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="pencil"/>
 <node COLOR="#0033ff" CREATED="1235921959706" ID="Freemind_Link_896909819" MODIFIED="1235921959706" TEXT="BasicApp">
 <edge WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#006633" CREATED="1235921959707" FOLDED="true" ID="Freemind_Link_1621393497" MODIFIED="1235932109690" TEXT="[General] = ">
+<node COLOR="#006633" CREATED="1235921959707" ID="Freemind_Link_1621393497" MODIFIED="1235932109690" TEXT="[General] = ">
 <node COLOR="#0033ff" CREATED="1235921959707" MODIFIED="1235921959707" TEXT="MVCApp"/>
-<node COLOR="#cc3300" CREATED="1235921959707" FOLDED="true" ID="Freemind_Link_829469982" MODIFIED="1235921959707" TEXT="m">
-<node COLOR="#006633" CREATED="1235921959707" ID="Freemind_Link_1707648556" MODIFIED="1235935018566" TEXT="[DB]"/>
+<node COLOR="#cc3300" CREATED="1235921959707" ID="Freemind_Link_829469982" MODIFIED="1235921959707" TEXT="m">
+<node COLOR="#006633" CREATED="1235921959707" ID="Freemind_Link_1707648556" MODIFIED="1235957674596" TEXT="[DB]">
+<icon BUILTIN="pencil"/>
+</node>
 </node>
 <node COLOR="#cc3300" CREATED="1235921959707" MODIFIED="1235921959707" TEXT="v"/>
 <node COLOR="#cc3300" CREATED="1235921959707" ID="Freemind_Link_1083755346" MODIFIED="1235921959707" TEXT="c">
-<node CREATED="1235921959707" FOLDED="true" ID="Freemind_Link_499256377" MODIFIED="1235921959707" TEXT="Usuario-Eventos Internos">
+<node CREATED="1235921959707" FOLDED="true" ID="Freemind_Link_499256377" MODIFIED="1235958062834" TEXT="(abstractionforcontroller)Usuario-Eventos Internos">
+<icon BUILTIN="pencil"/>
 <node COLOR="#999999" CREATED="1235921959707" MODIFIED="1235921959707" TEXT="Configuracion tipo:  Se pulsa tecla A: Se genera el evento Button1">
 <font NAME="Dialog" SIZE="10"/>
 </node>
 </node>
 </node>
 </node>
-<node COLOR="#006633" CREATED="1235921959708" ID="Freemind_Link_1560588321" MODIFIED="1235932190862" TEXT="[SceneManager]">
-<node COLOR="#338800" CREATED="1235932123813" FOLDED="true" ID="Freemind_Link_320236033" MODIFIED="1235932165162" TEXT="SceneManager">
-<node COLOR="#0033ff" CREATED="1235921959708" ID="Freemind_Link_565649825" MODIFIED="1235932766871" TEXT="Module">
-<node COLOR="#999999" CREATED="1235921959708" MODIFIED="1235921959708" TEXT="no es BasicApp porque no contiene directamente modulos dentro. los modulos estaran en Actual_Scene">
-<edge WIDTH="thin"/>
-<font NAME="Dialog" SIZE="10"/>
+<node COLOR="#006633" CREATED="1235921959708" ID="Freemind_Link_1560588321" MODIFIED="1235932190862" TEXT="[SceneManager]"/>
 </node>
-</node>
-<node COLOR="#cc3300" CREATED="1235921959708" FOLDED="true" ID="Freemind_Link_528080476" MODIFIED="1235932682151" TEXT="scenes = SDWAK()">
-<edge WIDTH="thin"/>
-<node COLOR="#999999" CREATED="1235921959708" MODIFIED="1235921959708" TEXT="Listado de recursos de dnd se ha de cargar las escenas. No estaran caragadas hasta que no se ejecuten el change_scene">
-<font NAME="Dialog" SIZE="10"/>
-</node>
-</node>
-<node COLOR="#cc3300" CREATED="1235921959708" ID="Freemind_Link_682347881" MODIFIED="1235932713283" TEXT="(Scene) actual_scene"/>
-<node COLOR="#006699" CREATED="1235921959708" ID="Freemind_Link_986019900" MODIFIED="1235931844643" TEXT="change_scene(name_scene)">
+<node COLOR="#338800" CREATED="1235921959713" FOLDED="true" ID="Freemind_Link_653171867" MODIFIED="1235957983649" TEXT="SceneApp">
 <edge WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="12"/>
-<node COLOR="#999999" CREATED="1235921959709" ID="Freemind_Link_1737399835" MODIFIED="1235932382286" TEXT="para la escena actual y la cambia por una nueva, luego la inicia">
-<font NAME="Dialog" SIZE="10"/>
-</node>
-</node>
-<node COLOR="#006699" CREATED="1235932386654" ID="Freemind_Link_1576057542" MODIFIED="1235932571902" TEXT="charge_scenes(path)">
-<node COLOR="#999999" CREATED="1235932541047" ID="Freemind_Link_280256792" MODIFIED="1235932555890" TEXT="lee un xml y carga las escenas indicadas">
-<font NAME="SansSerif" SIZE="10"/>
-</node>
-<node COLOR="#999999" CREATED="1235932561768" ID="Freemind_Link_1522326861" MODIFIED="1235932588571" TEXT="si es un directorio, cargara todos los xml que halla en el">
-<font NAME="SansSerif" SIZE="10"/>
-</node>
-</node>
-<node COLOR="#006699" CREATED="1235932505022" ID="Freemind_Link_1478889369" MODIFIED="1235932643370" TEXT="charge_scene(name,xmlfilename)">
-<node COLOR="#999999" CREATED="1235932417532" ID="Freemind_Link_113886959" MODIFIED="1235932537235" TEXT="carga un xml en scene_dict">
-<font NAME="SansSerif" SIZE="10"/>
-</node>
-</node>
-</node>
-</node>
-</node>
-<node COLOR="#338800" CREATED="1235921959713" FOLDED="true" ID="Freemind_Link_653171867" MODIFIED="1235926601308" TEXT="SceneApp">
-<edge WIDTH="thin"/>
-<font NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="pencil"/>
 <node COLOR="#999999" CREATED="1235921959713" MODIFIED="1235921959713" TEXT="idea">
 <font NAME="Dialog" SIZE="10"/>
 </node>
@@ -438,8 +464,12 @@
 <edge WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="12"/>
 </node>
-<node COLOR="#006699" CREATED="1235925834636" ID="Freemind_Link_39854216" MODIFIED="1235925856135" TEXT="start_scene()"/>
-<node COLOR="#006699" CREATED="1235925857009" ID="Freemind_Link_359456716" MODIFIED="1235925866208" TEXT="end_scene()"/>
+<node COLOR="#006699" CREATED="1235925834636" ID="Freemind_Link_39854216" MODIFIED="1235957983675" TEXT="start_scene()">
+<icon BUILTIN="pencil"/>
+</node>
+<node COLOR="#006699" CREATED="1235925857009" ID="Freemind_Link_359456716" MODIFIED="1235957983704" TEXT="end_scene()">
+<icon BUILTIN="pencil"/>
+</node>
 <node COLOR="#006699" CREATED="1235927831547" ID="Freemind_Link_1779423922" MODIFIED="1235927871261" TEXT="bool: is_started()">
 <edge WIDTH="thin"/>
 </node>
@@ -450,36 +480,43 @@
 </node>
 </node>
 <node COLOR="#009999" CREATED="1235921959712" ID="Freemind_Link_775207629" MODIFIED="1235921959712" TEXT="controller">
-<node COLOR="#338800" CREATED="1235921959712" FOLDED="true" ID="Freemind_Link_903480411" MODIFIED="1235936661408" TEXT="ToogleFullscreen">
+<node COLOR="#338800" CREATED="1235921959712" ID="Freemind_Link_903480411" MODIFIED="1235936661408" TEXT="ToogleFullscreen">
 <icon BUILTIN="button_ok"/>
-<node COLOR="#999999" CREATED="1235921959712" MODIFIED="1235921959712" TEXT="si a&#xf1;ades este modulo cuando pulses T cambias a pantalla completa">
+<node COLOR="#0033ff" CREATED="1235923624669" ID="Freemind_Link_1010878312" MODIFIED="1235986241077" TEXT="ModuleController">
+<icon BUILTIN="pencil"/>
+</node>
+<node COLOR="#999999" CREATED="1235921959712" ID="Freemind_Link_843877443" MODIFIED="1235921959712" TEXT="si a&#xf1;ades este modulo cuando pulses T cambias a pantalla completa">
 <font NAME="Dialog" SIZE="10"/>
 </node>
 </node>
-<node COLOR="#338800" CREATED="1235921959713" FOLDED="true" ID="Freemind_Link_1963827764" MODIFIED="1235921959713" TEXT="AbstractionForController">
+<node COLOR="#338800" CREATED="1235921959713" ID="Freemind_Link_1963827764" MODIFIED="1235921959713" TEXT="AbstractionForController">
 <node COLOR="#990099" CREATED="1235921959713" MODIFIED="1235921959713" TEXT="Singleton"/>
 <node COLOR="#0033ff" CREATED="1235923624669" ID="Freemind_Link_570177043" MODIFIED="1235923644370" TEXT="ModuleController"/>
 <node COLOR="#cc3300" CREATED="1235921959713" ID="Freemind_Link_1470602130" MODIFIED="1235921959713" TEXT="dic_events={}"/>
 <node COLOR="#cc3300" CREATED="1235921959713" ID="Freemind_Link_799893267" MODIFIED="1235921959713" TEXT="add_link(event_entrada,event_salida)"/>
 </node>
-<node COLOR="#009999" CREATED="1235921959710" ID="Freemind_Link_1350413632" MODIFIED="1235921959710" TEXT="time">
-<node COLOR="#338800" CREATED="1235921959710" FOLDED="true" ID="Freemind_Link_603460653" MODIFIED="1235921959710" TEXT="Timeline">
-<node COLOR="#0033ff" CREATED="1235923387196" ID="Freemind_Link_62715537" MODIFIED="1235923510160" TEXT="ModuleController"/>
+<node COLOR="#338800" CREATED="1235921959710" FOLDED="true" ID="Freemind_Link_603460653" MODIFIED="1235962637756" TEXT="Timeline">
+<icon BUILTIN="button_ok"/>
+<node COLOR="#990099" CREATED="1235921959713" MODIFIED="1235921959713" TEXT="Singleton"/>
+<node COLOR="#0033ff" CREATED="1235923387196" ID="Freemind_Link_62715537" MODIFIED="1235958733080" TEXT="ModuleController">
+<icon BUILTIN="pencil"/>
+</node>
 <node COLOR="#cc3300" CREATED="1235921959711" ID="Freemind_Link_1724475684" MODIFIED="1235921959711" TEXT="countdowns">
 <edge WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="12"/>
 </node>
 <node COLOR="#006699" CREATED="1235921959711" ID="Freemind_Link_1687852975" MODIFIED="1235921959711" TEXT="get_actual_time()"/>
-<node COLOR="#006699" CREATED="1235921959711" FOLDED="true" ID="Freemind_Link_1505474660" MODIFIED="1235921959711" TEXT="Countdown:add_event(event,time,times=1)">
-<node COLOR="#999999" CREATED="1235921959711" MODIFIED="1235921959711" TEXT="si times es 0, repetir infinitas veces">
+<node COLOR="#006699" CREATED="1235921959711" ID="Freemind_Link_1505474660" MODIFIED="1235921959711" TEXT="Countdown:add_event(event,time,times=1)">
+<node COLOR="#999999" CREATED="1235921959711" ID="Freemind_Link_128805876" MODIFIED="1235961908964" TEXT="si times es -1, repetir infinitas veces">
 <font NAME="Dialog" SIZE="10"/>
 </node>
 </node>
-</node>
-<node COLOR="#338800" CREATED="1235921959711" FOLDED="true" ID="Freemind_Link_1061340355" MODIFIED="1235934377356" TEXT="Countdown">
+<node COLOR="#338800" CREATED="1235921959711" ID="Freemind_Link_1061340355" MODIFIED="1235934377356" TEXT="Countdown">
 <edge WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="12"/>
-<node COLOR="#0033ff" CREATED="1235923387196" ID="Freemind_Link_1701312022" MODIFIED="1235923510160" TEXT="ModuleController"/>
+<node COLOR="#0033ff" CREATED="1235923387196" ID="Freemind_Link_1701312022" MODIFIED="1235986254624" TEXT="ModuleController">
+<icon BUILTIN="pencil"/>
+</node>
 <node COLOR="#cc3300" CREATED="1235921959711" ID="Freemind_Link_220699829" MODIFIED="1235921959711" TEXT="inital_time"/>
 <node COLOR="#cc3300" CREATED="1235921959712" MODIFIED="1235921959712" TEXT="end_time"/>
 <node COLOR="#006699" CREATED="1235921959712" FOLDED="true" ID="Freemind_Link_638783295" MODIFIED="1235921959712" TEXT="get_elapsed()">
@@ -495,14 +532,26 @@
 <node COLOR="#006699" CREATED="1235921959712" MODIFIED="1235921959712" TEXT="restart()"/>
 </node>
 </node>
-<node COLOR="#009999" CREATED="1235921959709" FOLDED="true" ID="Freemind_Link_1792866535" MODIFIED="1235921959709" TEXT="physics">
-<node COLOR="#338800" CREATED="1235921959709" ID="Freemind_Link_1024838753" MODIFIED="1235921959709" TEXT="PhGear">
-<node COLOR="#0033ff" CREATED="1235921959709" ID="Freemind_Link_919524911" MODIFIED="1235923266552" TEXT="ModuleController"/>
-<node COLOR="#cc6600" CREATED="1235921959709" MODIFIED="1235921959709" TEXT="FLAG_COLLIDABLE"/>
-<node COLOR="#cc3300" CREATED="1235921959709" MODIFIED="1235921959709" TEXT="gravity=0"/>
+<node COLOR="#338800" CREATED="1235921959709" ID="Freemind_Link_1024838753" MODIFIED="1235998589359" TEXT="Physic">
+<icon BUILTIN="xmag"/>
+<node COLOR="#990099" CREATED="1235921959713" MODIFIED="1235921959713" TEXT="Singleton"/>
+<node COLOR="#0033ff" CREATED="1235921959709" ID="Freemind_Link_919524911" MODIFIED="1235998581259" TEXT="ModuleController">
+<icon BUILTIN="pencil"/>
 </node>
-<node COLOR="#338800" CREATED="1235921959709" ID="Freemind_Link_1331970301" MODIFIED="1235921959709" TEXT="PhObject">
-<node COLOR="#cc3300" CREATED="1235933959848" ID="Freemind_Link_186362852" MODIFIED="1235934044478" TEXT="__PhGear=PhGear()"/>
+<node COLOR="#cc3300" CREATED="1235921959709" ID="Freemind_Link_445494471" MODIFIED="1235987913028" TEXT="FLAG_COLLIDABLE"/>
+<node COLOR="#cc3300" CREATED="1235921959709" ID="Freemind_Link_759361108" MODIFIED="1235989124484" TEXT="gravity=(0,0,0)"/>
+</node>
+<node COLOR="#338800" CREATED="1235934325157" ID="Freemind_Link_1742836979" MODIFIED="1235936678485" TEXT="camera!!!!">
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node COLOR="#338800" CREATED="1235921959709" ID="Freemind_Link_1331970301" MODIFIED="1235998555364" TEXT="PhObject">
+<icon BUILTIN="pencil"/>
+<node COLOR="#990000" CREATED="1235998410045" ID="Freemind_Link_1061377005" MODIFIED="1235998529043" TEXT="falta comprobar colisiones antes de mover, y todo lo que es interactuar. tambien habria que cambiar los updates y cambiar la posicion en proporicion al tiempo)">
+<edge WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="12"/>
+</node>
+<node COLOR="#cc3300" CREATED="1235933959848" ID="Freemind_Link_186362852" MODIFIED="1235998425036" TEXT="__PhGear=Physic()"/>
 <node COLOR="#cc3300" CREATED="1235921959709" ID="Freemind_Link_1591289922" MODIFIED="1235921959709" TEXT="vel=(0,0,0)">
 <edge WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="12"/>
@@ -524,11 +573,6 @@
 <font NAME="SansSerif" SIZE="12"/>
 </node>
 <node COLOR="#006699" CREATED="1235921959710" MODIFIED="1235921959710" TEXT="move()"/>
-</node>
-</node>
-<node COLOR="#338800" CREATED="1235934325157" ID="Freemind_Link_1742836979" MODIFIED="1235936678485" TEXT="camera!!!!">
-<icon BUILTIN="messagebox_warning"/>
-</node>
 </node>
 <node COLOR="#009999" CREATED="1235921959714" ID="Freemind_Link_1890134682" MODIFIED="1235926980844" TEXT="menu">
 <node COLOR="#338800" CREATED="1235921959714" FOLDED="true" ID="Freemind_Link_1530804969" MODIFIED="1235936920899" TEXT="Menu">
@@ -592,8 +636,8 @@
 <font NAME="Dialog" SIZE="10"/>
 </node>
 </node>
-<node COLOR="#009999" CREATED="1235921959714" ID="Freemind_Link_348947697" MODIFIED="1235926940662" TEXT="testing">
-<node COLOR="#999999" CREATED="1235935820556" FOLDED="true" ID="Freemind_Link_219935240" MODIFIED="1235935842877" TEXT="Note:">
+<node COLOR="#009999" CREATED="1235921959714" FOLDED="true" ID="Freemind_Link_348947697" MODIFIED="1235926940662" TEXT="testing">
+<node COLOR="#999999" CREATED="1235935820556" ID="Freemind_Link_219935240" MODIFIED="1235935842877" TEXT="Note:">
 <font NAME="SansSerif" SIZE="10"/>
 <node COLOR="#999999" CREATED="1235927462552" ID="Freemind_Link_11538590" MODIFIED="1235927505030" TEXT="los objetos de este modulo no estaran separados bajo el modelo mvc, puesto que estan destinado solo a las pruebas">
 <font NAME="SansSerif" SIZE="10"/>
