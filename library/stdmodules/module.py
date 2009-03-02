@@ -1,5 +1,5 @@
 import types
-from library import core
+import library
 import sys
 
 def deco_verboso(name,nmethod,method):
@@ -50,6 +50,7 @@ class Module(object):
         else:
             #constructor por defecto de las subclases
             self.need_update=[]
+            from library import core
             self.core=core.Core()
             self.app=self.core.get_app()
             
@@ -69,6 +70,16 @@ class Module(object):
     def event_to_red(self,name,*args,**kw):
         print "se esta ejecutando:", name, ", con los parametros:", args, kw
         getattr(self,name)(*args,**kw)
+        
+    def add_parent(self,module):
+        if not hasattr(self,'parents'):
+            self.parents=[]
+        elif not isinstance(self.parents,list):
+            self.parents=[self.parents]
+        self.parents.append(module)
+    
+    def remove_parent(self,module):
+        self.parents.remove(module)
         
 class AbstractClassException(Exception) :
     def __str__(self):
