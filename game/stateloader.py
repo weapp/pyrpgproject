@@ -10,6 +10,7 @@ from rpglibrary import character as character_
 from library.stdmodules.menu import menu as menu_
 from library.stdmodules.controller import toogle_fullscreen as toogle_fullscreen_
 from library.stdmodules.testing import fps as fps_
+from library.stdmodules.testing import showdic as showdic_
 
 core=core.Core()
 screen=core.get_screen()
@@ -50,3 +51,8 @@ def toogle_fullscreen():
     
 def fps():
     return fps_.Fps(screen,core.clock)
+
+def showdic(**dic):
+    shwd=showdic_.ShowDic(screen,clock=core.clock,**dic)
+    #shwd['clock']=fps()
+    return shwd

@@ -34,4 +34,8 @@ class BasicApp(sdwak.SDWAK,module.Module):
 
     def add(self,module):
         sdwak.SDWAK.add(self,module)
-        module.add_parent(self)
+        module.set_parent(self)
+        
+    def append(self,module):
+        sdwak.SDWAK.add(self,module)
+        module.set_parent(self)

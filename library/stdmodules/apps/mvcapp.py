@@ -6,8 +6,8 @@ from library.stdmodules import mvcmodule
 
 class MVCApp(basicapp.BasicApp,mvcmodule.MVCModule):
     def __init__(self):
-        basicapp.BasicApp.__init__(self)
         mvcmodule.MVCModule.__init__(self,basicapp.BasicApp(),basicapp.BasicApp(),basicapp.BasicApp())
+        basicapp.BasicApp.__init__(self)
     
     def new_event(self,event):
         mvcmodule.MVCModule.new_event(self,event)

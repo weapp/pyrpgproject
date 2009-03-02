@@ -1,18 +1,19 @@
 import types
 import library
 import sys
+import moduledata
+import moduleview
+import modulecontroller
 
 def deco_verboso(name,nmethod,method):
     if nmethod == "__init__":
         def method2(*args,**kw):
-            print "Creando objeto: %s(%s, %s)" % (str(name), ", ".join(map(repr,args)), repr(kw) )
+            print "Creando objeto: %s(%s, %s)" % (name, ", ".join(map(repr,args)), repr(kw) )
             return method(*args,**kw)
         return method2
     else:
         def method2(*args,**kw):
-            #print "llamando a: ",repr(name)+'.'+repr(nmethod),"(",", ".join(map(repr,args)),repr(kw),")"
-            print "Llamando a: %s.%s(%s, %s)" % (str(name) , str(nmethod) , ", ".join(map(repr,args)), repr(kw) )
-            #,repr(name)+'.'+repr(nmethod),"(",", ".join(map(repr,args)),repr(kw),")"
+            print "Llamando a: %s.%s(%s, %s)" % (name , nmethod , ", ".join(map(repr,args)), repr(kw) )
             return method(*args,**kw)
         return method2
 
@@ -42,14 +43,14 @@ class Meta_Verboso(type):
         cls.__init__(*args,**kw)""" #no funciona
         
         
-class Module(object):
+class Module(moduledata.ModuleData, moduleview.ModuleView, \
+             modulecontroller.ModuleController):
     __metaclass__ = Meta_Verboso
     def __init__(self) :
         if type(self) is Module:
             raise AbstractClassException
         else:
             #constructor por defecto de las subclases
-            self.need_update=[]
             from library import core
             self.core=core.Core()
             self.app=self.core.get_app()
@@ -58,28 +59,10 @@ class Module(object):
         return False
         
     def update(self):
-        return self.need_update
+        pass
         
     def draw(self):
         pass
-        
-    #def send_to_red(self,name,*args,**kw): #TODO mandar una funcion con el resultado
-    
-    #def get_from_red(self,name,*args,**kw): #TODO pedir al servidor el resultado de una funcion
-    
-    def event_to_red(self,name,*args,**kw):
-        print "se esta ejecutando:", name, ", con los parametros:", args, kw
-        getattr(self,name)(*args,**kw)
-        
-    def add_parent(self,module):
-        if not hasattr(self,'parents'):
-            self.parents=[]
-        elif not isinstance(self.parents,list):
-            self.parents=[self.parents]
-        self.parents.append(module)
-    
-    def remove_parent(self,module):
-        self.parents.remove(module)
         
 class AbstractClassException(Exception) :
     def __str__(self):

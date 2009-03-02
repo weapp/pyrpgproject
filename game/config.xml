@@ -30,11 +30,21 @@
         <param>
             <obj type="list">
                 <param>Preferences</param>
+                <param>
+                    <! - - <obj type="option">
+                        blablabla
+                    </obj> - - >
+                </param>
                 <param>Controllers</param>
                 <param>Exit</param>
             </obj>
         </param>
     </obj>-->
     <obj type="toogle_fullscreen" />
-    <obj type="fps" />
+    <!--<obj type="fps" />-->
+    <obj type="showdic">
+        <param name="fps">
+            <obj type="fps" />
+        </param>
+    </obj>
 </state>
