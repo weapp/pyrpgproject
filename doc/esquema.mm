@@ -169,7 +169,7 @@
 <font NAME="Dialog" SIZE="10"/>
 </node>
 </node>
-<node COLOR="#009999" CREATED="1235921959421" ID="Freemind_Link_1069797286" MODIFIED="1235921959421" TEXT="resources">
+<node COLOR="#009999" CREATED="1235921959421" FOLDED="true" ID="Freemind_Link_1069797286" MODIFIED="1235921959421" TEXT="resources">
 <edge WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="12"/>
 <node COLOR="#999999" CREATED="1235921959422" MODIFIED="1235921959422" TEXT="es independiente del core. administra los recursos">
@@ -235,7 +235,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#338800" CREATED="1235921959426" MODIFIED="1235921959426" TEXT="Text"/>
+<node COLOR="#338800" CREATED="1235921959426" ID="Freemind_Link_1643579225" MODIFIED="1236079151507" TEXT="Text"/>
 </node>
 <node COLOR="#338800" CREATED="1235921959426" FOLDED="true" ID="Freemind_Link_131981960" MODIFIED="1235936587507" TEXT="Core">
 <icon BUILTIN="button_ok"/>
@@ -269,11 +269,24 @@
 </node>
 <node COLOR="#338800" CREATED="1235922722411" FOLDED="true" ID="Freemind_Link_1844359902" MODIFIED="1236014793909" TEXT="(abstract) ModuleView">
 <icon BUILTIN="button_ok"/>
-<node COLOR="#0033ff" CREATED="1235928262385" ID="Freemind_Link_1452294553" MODIFIED="1235928268714" TEXT="pygame.sprite.Sprite"/>
-<node COLOR="#cc3300" CREATED="1236011773840" ID="Freemind_Link_556912464" MODIFIED="1236011785184" TEXT="image"/>
-<node COLOR="#cc3300" CREATED="1236011776403" ID="Freemind_Link_1915424619" MODIFIED="1236011785196" TEXT="rect"/>
-<node COLOR="#006699" CREATED="1236010783114" ID="Freemind_Link_1120778595" MODIFIED="1236010788618" TEXT="update()">
+<node COLOR="#0033ff" CREATED="1235928262385" ID="Freemind_Link_1452294553" MODIFIED="1236027259437" TEXT="pygame.sprite.Sprite">
+<icon BUILTIN="button_cancel"/>
+<node COLOR="#990000" CREATED="1236027251293" ID="Freemind_Link_669476224" MODIFIED="1236027844269" TEXT="no debe heredar de pygame sprite, porque no todos los modulos tienen pk estar compuesto por una unica imagen. un personaje por ejemplo podria tener mas de un sprite">
+<font NAME="SansSerif" SIZE="10"/>
+</node>
+</node>
+<node COLOR="#cc3300" CREATED="1236011773840" ID="Freemind_Link_556912464" MODIFIED="1236077056916" TEXT="image">
+<icon BUILTIN="button_cancel"/>
+</node>
+<node COLOR="#cc3300" CREATED="1236011776403" ID="Freemind_Link_1915424619" MODIFIED="1236077056791" TEXT="rect">
+<icon BUILTIN="button_cancel"/>
+</node>
+<node COLOR="#006699" CREATED="1236010783114" ID="Freemind_Link_1120778595" MODIFIED="1236077124964" TEXT="update()">
+<icon BUILTIN="xmag"/>
 <node COLOR="#999999" CREATED="1236011570374" ID="Freemind_Link_1065989900" MODIFIED="1236011580931" TEXT="automaticamente por heredar de sprite">
+<font NAME="SansSerif" SIZE="10"/>
+</node>
+<node COLOR="#999999" CREATED="1236077130231" ID="Freemind_Link_1831031071" MODIFIED="1236077177896" TEXT="dado que algunos tipos de modulos draw podrian necesitarlo, como por ejemplo las animaciones, es conveniente que lo tengan todos">
 <font NAME="SansSerif" SIZE="10"/>
 </node>
 </node>
@@ -300,6 +313,9 @@
 <node COLOR="#338800" CREATED="1235930961608" FOLDED="true" ID="Freemind_Link_1506591087" MODIFIED="1235956248520" TEXT="MVCModule">
 <icon BUILTIN="button_ok"/>
 <node COLOR="#0033ff" CREATED="1235931003598" ID="Freemind_Link_1230433082" MODIFIED="1235931085096" TEXT="Module"/>
+<node COLOR="#999999" CREATED="1236015513310" ID="Freemind_Link_1882622258" MODIFIED="1236015562610" TEXT="no puede heredar de una app, pues no todos los modulos tienen porque tener todas las facetas implementadas">
+<font NAME="SansSerif" SIZE="10"/>
+</node>
 <node COLOR="#006699" CREATED="1235928858097" ID="Freemind_Link_631533912" MODIFIED="1235931099940" TEXT="__init__(ModuleData=None,ModuleView=None,ModuleController=None)"/>
 <node COLOR="#cc3300" CREATED="1235921959438" ID="Freemind_Link_446025459" MODIFIED="1236009688911" TEXT="(ModuleData) m"/>
 <node COLOR="#cc3300" CREATED="1235921959439" ID="Freemind_Link_947440142" MODIFIED="1236009685998" TEXT="(ModuleView) v"/>
@@ -328,7 +344,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#338800" CREATED="1235932123813" FOLDED="true" ID="Freemind_Link_320236033" MODIFIED="1236009723584" TEXT="SceneManager">
+<node COLOR="#338800" CREATED="1235932123813" ID="Freemind_Link_320236033" MODIFIED="1236086540037" TEXT="SceneManager">
 <icon BUILTIN="pencil"/>
 <node COLOR="#0033ff" CREATED="1235921959708" ID="Freemind_Link_565649825" MODIFIED="1235932766871" TEXT="Module">
 <node COLOR="#999999" CREATED="1235921959708" MODIFIED="1235921959708" TEXT="no es BasicApp porque no contiene directamente modulos dentro. los modulos estaran en Actual_Scene">
@@ -342,7 +358,7 @@
 <font NAME="Dialog" SIZE="10"/>
 </node>
 </node>
-<node COLOR="#cc3300" CREATED="1235921959708" ID="Freemind_Link_682347881" MODIFIED="1235932713283" TEXT="(Scene) actual_scene"/>
+<node COLOR="#cc3300" CREATED="1235921959708" ID="Freemind_Link_682347881" MODIFIED="1236086574467" TEXT="(SceneApp) actual_scene"/>
 <node COLOR="#006699" CREATED="1235921959708" ID="Freemind_Link_986019900" MODIFIED="1235931844643" TEXT="change_scene(name_scene)">
 <edge WIDTH="thin"/>
 <font NAME="SansSerif" SIZE="12"/>

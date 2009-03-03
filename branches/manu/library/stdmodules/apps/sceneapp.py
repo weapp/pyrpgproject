@@ -11,6 +11,7 @@ class SceneApp(basicapp.BasicApp):
     def start_scene(self):
         self.__is_started=True
         
+        
     def end_scene(self):
         self.__is_started=False
         

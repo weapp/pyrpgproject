@@ -45,7 +45,7 @@ class Meta_Verboso(type):
         
 class Module(moduledata.ModuleData, moduleview.ModuleView, \
              modulecontroller.ModuleController):
-    __metaclass__ = Meta_Verboso
+    #__metaclass__ = Meta_Verboso
     def __init__(self) :
         moduledata.ModuleData.__init__(self)
         moduleview.ModuleView.__init__(self)
