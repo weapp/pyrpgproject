@@ -2,7 +2,7 @@ import tarfile
 import xml.dom.minidom
 from pygame import Color
 import pygame
-from library import textrect
+from library.resources import textrect
 
 def formatear(string):
     s=''
