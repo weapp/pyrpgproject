@@ -1,7 +1,7 @@
 from kdiparser import kdifile
 import pygame
 from library import core
-from library import basicapp
+from library.stdmodules.apps import basicapp
 from kdiparser import sideinfo
    
 #screen=pygame.display.set_mode((800,500) ,pygame.DOUBLEBUF | pygame.HWSURFACE | pygame.SRCALPHA)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
 
-from library.sidebar import *
+from library.stdmodules.sidebar import *
 
 class SideInfo(Sidebar):
     def __init__(self,surface,kdi):

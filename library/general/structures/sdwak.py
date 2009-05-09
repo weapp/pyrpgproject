@@ -17,11 +17,15 @@ class SDWAK(sortabledict.SortableDict):
             print key
     
     def append(self,x):
-        self.last_int+=1
-        while self.last_int in self:
-            self.last_int+=1
+        self.last_int=next_index()
         self[self.last_int]=x
+        return self.last_int
     
+    def next_index(self):
+        i = self.last_int + 1
+        while i in self: i += 1
+        return i
+        
     add=append
     
 if __name__ == '__main__':

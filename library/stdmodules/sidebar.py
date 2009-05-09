@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
 
-from library import module
-from library.images import getImage 
+from library.stdmodules import module
+from library.resources.images import getImage 
 import pygame
 from library import core
 from pygame import Color
-import textrect
+from library.resources import textrect
 from HTMLParser import HTMLParser
 
 pygame.font.init()
