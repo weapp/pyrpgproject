@@ -17,7 +17,7 @@ class SDWAK(sortabledict.SortableDict):
             print key
     
     def append(self,x):
-        self.last_int=next_index()
+        self.last_int=self.next_index()
         self[self.last_int]=x
         return self.last_int
     
