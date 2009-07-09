@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
 
-import sortable_list
+from library.general.structures import sortablelist
 import pygame
 
-class Dirty_app(sortable_list.Sortable_list):
+class Dirty_app(sortablelist.SortableList):
     def new_event(self,event):        
         b=False
         self.reverse()

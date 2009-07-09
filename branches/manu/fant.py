@@ -1,7 +1,9 @@
-from library import core,module,images
+from library.resources import images
+from library.stdmodules import module
+from library import core
 from pygame import *
 
-images.SKIN='../pruebas'
+images.SKIN='../../pruebas'
 
 VELOC=15
 ANGLE=4

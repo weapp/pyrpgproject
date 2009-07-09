@@ -1,4 +1,7 @@
-from library import core,module,images,dirty_app
+from library import core
+from library.stdmodules import module
+from library.resources import images
+from library.stdmodules.apps import dirty_app
 from pygame import *
 
 class rectangles(module.Module):
